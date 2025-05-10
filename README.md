@@ -26,14 +26,20 @@ Additionally, the design is independent of Vivado IP (excluding inherent FPGA bu
 
 # Demonstration
 
-## HDMI Stream
-
 ## Test Patterns
 
 |BPP,FPS,FPGA,Lanes,I/F|Video|
 |:-:|:-:|
 |16, 60,K7,4,R-Net |[![16 BPP 60FPS](https://img.youtube.com/vi/s9c-84hYdOA/mqdefault.jpg)](https://youtube.com/video/s9c-84hYdOA)|
 |24, 60,K7,4,R-Net |[![24 BPP 60FPS](https://img.youtube.com/vi/h76Uy9ckroE/mqdefault.jpg)](https://youtube.com/video/h76Uy9ckroE)|
+
+# Experiment findings
+
+```
+According to Xilinx and Intel document, users are required to control the length between FPGA differential I/O to LCD/TFT I/F must kept as short as possible.
+However, in this 10.1" LCD experiment, it is not necessary to maintain a short cable length.
+Trade-off can be made between length of the cable and MIPI-DSI clock frequency, which this LCD is using a long cable (200 mm) @clock freq. 500Mbps.
+```
 
 # How to obtain the design?
 
